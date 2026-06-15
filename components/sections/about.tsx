@@ -10,8 +10,8 @@ export function About() {
   const { t } = useLanguage()
 
   const stats = [
-    { value: "5+", label: t.about.statsExp },
-    { value: "6", label: t.about.statsProjects },
+    { value: "2+", label: t.about.statsExp },
+    { value: "5", label: t.about.statsProjects },
     { value: "10+", label: t.about.statsStack },
   ]
 
@@ -27,7 +27,7 @@ export function About() {
             />
             <div className="relative aspect-square overflow-hidden rounded-3xl border border-border glow-purple">
               <Image
-                src="/profile-guillermo.png"
+                src="/profile-photo.jpeg"
                 alt="Guillermo Fuentes, Desarrollador Full Stack"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
@@ -74,7 +74,7 @@ export function About() {
 
             <ScrollReveal delay={320}>
               <a
-                href="/cv-guillermo-fuentes.pdf"
+                href="/cv/CV%20Guillermo%20Fuentes%20(2).pdf"
                 download
                 className="mt-8 inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-5 py-2.5 text-sm font-semibold transition-colors hover:bg-accent hover:text-accent-foreground"
               >

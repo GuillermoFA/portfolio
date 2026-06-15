@@ -43,12 +43,12 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
       {/* Project screenshot */}
       <div className="relative overflow-hidden">
-        <div className="shimmer relative aspect-[16/10] overflow-hidden bg-background">
+        <div className="shimmer relative aspect-video overflow-hidden bg-background">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={project.image || "/placeholder.svg"}
             alt={`${project.title} — ${project.category[lang]}`}
-            className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+            className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
             loading="lazy"
           />
         </div>

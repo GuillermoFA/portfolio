@@ -115,6 +115,7 @@ export const experience: ExperienceItem[] = [
 
 export type Project = {
   title: string
+  year: number
   category: ML
   description: ML
   highlights: Record<Lang, string[]>
@@ -124,8 +125,10 @@ export type Project = {
 }
 
 export const projects: Project[] = [
+  // 2026
   {
-    title: "TEAMFLOW",
+    title: "Organigrama dinamico (TEAMFLOW)",
+    year: 2026,
     category: { es: "Plataforma empresarial", en: "Enterprise platform", pt: "Plataforma empresarial" },
     description: {
       es: "Plataforma corporativa que centraliza la información de toda la dotación de LATAM Airlines en un solo lugar, eliminando planillas dispersas y procesos manuales. Permite gestionar cambios organizacionales, aprobar solicitudes operativas y visualizar la jerarquía completa de la compañía en tiempo real.",
@@ -142,6 +145,7 @@ export const projects: Project[] = [
   },
   {
     title: "Portal de Observabilidad (OA)",
+    year: 2026,
     category: { es: "Analítica & Métricas", en: "Analytics & Metrics", pt: "Analítica & Métricas" },
     description: {
       es: "Portal de analítica que transforma datos de talento en métricas accionables de Growth y Glow. Entrega a cada colaborador y líder dashboards claros para hacer seguimiento al desempeño, fortalecer el feedback continuo e impulsar el crecimiento interno con decisiones basadas en datos.",
@@ -153,16 +157,35 @@ export const projects: Project[] = [
       en: ["Performance dashboards", "Growth & Glow metrics", "Continuous feedback"],
       pt: ["Dashboards de desempenho", "Métricas Growth & Glow", "Feedback contínuo"],
     },
-    tech: ["Angular", "Java", "Data Viz"],
+    tech: ["Angular", "Java"],
     image: "/projects/oa-portal.png",
   },
   {
+    title: "Landing Page — OM LTDA",
+    year: 2026,
+    category: { es: "Sitio web corporativo", en: "Corporate website", pt: "Site corporativo" },
+    description: {
+      es: "Sitio web corporativo para OM LTDA, empresa con 18 años de trayectoria en la industria minera orientada a la sostenibilidad. Diseño moderno que comunica su propuesta de valor medioambiental, historia y servicios especializados para el sector minero.",
+      en: "Corporate website for OM LTDA, a company with 18 years of experience in the mining industry focused on sustainability. Modern design that communicates their environmental value proposition, history and specialized services for the mining sector.",
+      pt: "Site corporativo para a OM LTDA, empresa com 18 anos de trajetória na indústria mineira orientada à sustentabilidade. Design moderno que comunica sua proposta de valor ambiental, história e serviços especializados para o setor de mineração.",
+    },
+    highlights: {
+      es: ["18 años en minería", "Enfoque en sostenibilidad", "Diseño responsivo"],
+      en: ["18 years in mining", "Sustainability focus", "Responsive design"],
+      pt: ["18 anos na mineração", "Foco em sustentabilidade", "Design responsivo"],
+    },
+    tech: ["Next.js", "TypeScript"],
+    image: "/projects/landing.png",
+  },
+  // 2025
+  {
     title: "Cartilla de Identificación Segura (CIS)",
+    year: 2025,
     category: { es: "App crítica de seguridad", en: "Critical safety app", pt: "App crítico de segurança" },
     description: {
-      es: "Aplicación web crítica para Minera Escondida BHP que digitaliza y da trazabilidad a la documentación de seguridad en terreno. Reemplaza el papel por registros digitales auditables, asegurando que cada trabajador cumpla los protocolos antes de ingresar a faena y reduciendo riesgos operacionales.",
-      en: "Critical web app for Minera Escondida BHP that digitizes and traces field safety documentation. It replaces paper with auditable digital records, ensuring every worker meets protocols before entering the site and reducing operational risks.",
-      pt: "Aplicação web crítica para a Minera Escondida BHP que digitaliza e dá rastreabilidade à documentação de segurança em campo. Substitui o papel por registros digitais auditáveis, garantindo que cada trabalhador cumpra os protocolos antes de entrar na operação e reduzindo riscos operacionais.",
+      es: "Aplicación web crítica para Minera Escondida BHP que digitaliza y da trazabilidad a la documentación de seguridad en terreno. Reemplaza el papel por registros digitales.",
+      en: "Critical web app for Minera Escondida BHP that digitizes and traces field safety documentation. It replaces paper with digital records.",
+      pt: "Aplicação web crítica para a Minera Escondida BHP que digitaliza e dá rastreabilidade à documentação de segurança em campo. Substitui o papel por registros digitais.",
     },
     highlights: {
       es: ["Registros auditables", "Validación en terreno", "Cumplimiento de protocolos"],
@@ -170,10 +193,29 @@ export const projects: Project[] = [
       pt: ["Registros auditáveis", "Validação em campo", "Cumprimento de protocolos"],
     },
     tech: ["NestJS", "Vue.js", "GCP"],
-    image: "/projects/cis.png",
+    image: "/projects/thermoshield.jpeg",
   },
   {
+    title: "Control de Turnos — AquaChile",
+    year: 2025,
+    category: { es: "App de gestión operacional", en: "Operational management app", pt: "App de gestão operacional" },
+    description: {
+      es: "Aplicación web para el gerenciamiento diario y control operacional en plantas de producción y envasado de AquaChile. Permite a supervisores iniciar y registrar sus turnos de trabajo, haciendo seguimiento en tiempo real de los KPIs clave de cada proceso productivo.",
+      en: "Web application for daily management and operational control at AquaChile's production and packaging plants. Supervisors can start and record their work shifts while tracking key KPIs of each production process in real time.",
+      pt: "Aplicação web para gerenciamento diário e controle operacional nas plantas de produção e embalagem da AquaChile. Permite que supervisores iniciem e registrem seus turnos de trabalho, acompanhando em tempo real os KPIs principais de cada processo produtivo.",
+    },
+    highlights: {
+      es: ["Control de turnos en tiempo real", "KPIs por proceso", "Trazabilidad operacional"],
+      en: ["Real-time shift control", "Per-process KPIs", "Operational traceability"],
+      pt: ["Controle de turnos em tempo real", "KPIs por processo", "Rastreabilidade operacional"],
+    },
+    tech: ["React", "Node.js", "TypeScript"],
+    image: "/projects/aquachile.png",
+  },
+  // 2024
+  {
     title: "Detección de errores en itinerarios",
+    year: 2024,
     category: { es: "Data Analytics", en: "Data Analytics", pt: "Data Analytics" },
     description: {
       es: "Módulo automatizado de analítica avanzada que monitorea los itinerarios de vuelos comerciales de LATAM y detecta errores críticos antes de que impacten la operación. Mediante pipelines de datos en la nube, alerta de forma temprana inconsistencias que antes se descubrían tarde, evitando costos y problemas en la red de vuelos.",
@@ -188,8 +230,10 @@ export const projects: Project[] = [
     tech: ["BigQuery", "Dataform", "GCP"],
     image: "/projects/itinerary.png",
   },
+  // 2023
   {
-    title: "Automatización HSEC minera",
+    title: "Software HSEC",
+    year: 2023,
     category: { es: "Automatización", en: "Automation", pt: "Automação" },
     description: {
       es: "Conjunto de sistemas para el área HSEC de Compañía Minera Lomas Bayas: gestión de carpetas de arranque, acreditación de contratistas y control de dotación en faena. Incluye una automatización en Python que genera y envía los reportes diarios de Salud y Seguridad, ahorrando horas de trabajo manual al equipo.",
@@ -204,8 +248,10 @@ export const projects: Project[] = [
     tech: [".NET Core", "Angular", "Python"],
     image: "/projects/hsec.png",
   },
+  // 2021
   {
     title: "Control de flota — Yireh",
+    year: 2021,
     category: { es: "Logística & Operaciones", en: "Logistics & Operations", pt: "Logística & Operações" },
     description: {
       es: "Digitalización completa de los flujos logísticos y operativos de Transportes Yireh. Reemplacé los checklists en papel por sistemas de control pre-tarea y post-tarea, dando trazabilidad a cada operación de la flota y optimizando los tiempos del equipo en terreno.",
@@ -221,6 +267,8 @@ export const projects: Project[] = [
     image: "/projects/fleet.png",
   },
 ]
+
+
 
 export type Certificate = {
   name: string

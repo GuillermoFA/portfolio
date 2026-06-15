@@ -1,99 +1,106 @@
-export type Lang = "es" | "en" | "pt"
+export type Lang = "es" | "en" | "pt";
 
 export const LANGS: { code: Lang; label: string; flag: string }[] = [
   { code: "es", label: "Español", flag: "ES" },
   { code: "en", label: "English", flag: "EN" },
   { code: "pt", label: "Português", flag: "PT" },
-]
+];
 
 type Dict = {
   nav: {
-    about: string
-    value: string
-    services: string
-    process: string
-    experience: string
-    projects: string
-    certificates: string
-    contact: string
-  }
+    about: string;
+    value: string;
+    services: string;
+    process: string;
+    experience: string;
+    projects: string;
+    certificates: string;
+    contact: string;
+  };
   hero: {
-    available: string
-    role: string
-    title: string
-    subtitle: string
-    ctaContact: string
-    ctaCv: string
-    location: string
-  }
+    available: string;
+    role: string;
+    title: string;
+    subtitle: string;
+    ctaContact: string;
+    ctaCv: string;
+    location: string;
+  };
   about: {
-    tag: string
-    title: string
-    p1: string
-    p2: string
-    statsExp: string
-    statsProjects: string
-    statsStack: string
-    downloadCv: string
-  }
+    tag: string;
+    title: string;
+    p1: string;
+    p2: string;
+    statsExp: string;
+    statsProjects: string;
+    statsStack: string;
+    downloadCv: string;
+  };
   value: {
-    tag: string
-    title: string
-    subtitle: string
-    items: { title: string; desc: string }[]
-  }
+    tag: string;
+    title: string;
+    subtitle: string;
+    items: { title: string; desc: string }[];
+  };
   services: {
-    tag: string
-    title: string
-    subtitle: string
-    items: { title: string; desc: string; features: string[] }[]
-    cta: string
-  }
+    tag: string;
+    title: string;
+    subtitle: string;
+    items: { title: string; desc: string; features: string[] }[];
+    cta: string;
+  };
   process: {
-    tag: string
-    title: string
-    subtitle: string
-    steps: { title: string; desc: string }[]
-    supportTitle: string
-    supportDesc: string
-  }
+    tag: string;
+    title: string;
+    subtitle: string;
+    steps: { title: string; desc: string }[];
+    supportTitle: string;
+    supportDesc: string;
+  };
   experience: {
-    tag: string
-    title: string
-    subtitle: string
-    present: string
-  }
+    tag: string;
+    title: string;
+    subtitle: string;
+    present: string;
+  };
   projects: {
-    tag: string
-    title: string
-    subtitle: string
-    viewProject: string
-  }
+    tag: string;
+    title: string;
+    subtitle: string;
+    viewProject: string;
+  };
   certificates: {
-    tag: string
-    title: string
-    subtitle: string
-  }
+    tag: string;
+    title: string;
+    subtitle: string;
+  };
   contact: {
-    tag: string
-    title: string
-    subtitle: string
-    linkedinTitle: string
-    linkedinDesc: string
-    linkedinCta: string
-    scheduleTitle: string
-    scheduleDesc: string
-    pickDate: string
-    pickTime: string
-    confirm: string
-    confirmed: string
-    confirmedNote: string
-  }
+    tag: string;
+    title: string;
+    subtitle: string;
+    linkedinTitle: string;
+    linkedinDesc: string;
+    linkedinCta: string;
+    scheduleTitle: string;
+    scheduleDesc: string;
+    pickDate: string;
+    pickTime: string;
+    nameLabel: string;
+    emailLabel: string;
+    namePlaceholder: string;
+    emailPlaceholder: string;
+    slotTaken: string;
+    bookingError: string;
+    bookingSuccess: string;
+    confirm: string;
+    confirmed: string;
+    confirmedNote: string;
+  };
   footer: {
-    rights: string
-    built: string
-  }
-}
+    rights: string;
+    built: string;
+  };
+};
 
 export const translations: Record<Lang, Dict> = {
   es: {
@@ -160,12 +167,20 @@ export const translations: Record<Lang, Dict> = {
         {
           title: "Páginas web & Landing pages",
           desc: "Sitios modernos, rápidos y optimizados que convierten visitantes en clientes.",
-          features: ["Diseño responsivo", "SEO & rendimiento", "Animaciones a medida"],
+          features: [
+            "Diseño responsivo",
+            "SEO & rendimiento",
+            "Animaciones a medida",
+          ],
         },
         {
           title: "Aplicaciones web a medida",
           desc: "Software empresarial full stack para gestionar y escalar tu operación.",
-          features: ["Dashboards & paneles", "Integraciones API", "Bases de datos"],
+          features: [
+            "Dashboards & paneles",
+            "Integraciones API",
+            "Bases de datos",
+          ],
         },
       ],
       cta: "Cotizar un proyecto",
@@ -204,13 +219,15 @@ export const translations: Record<Lang, Dict> = {
     experience: {
       tag: "Trayectoria",
       title: "Mi línea de tiempo profesional",
-      subtitle: "Un recorrido por las empresas y proyectos que han formado mi experiencia.",
+      subtitle:
+        "Un recorrido por las empresas y proyectos que han formado mi experiencia.",
       present: "Actual",
     },
     projects: {
       tag: "Proyectos",
       title: "Trabajos seleccionados",
-      subtitle: "Una muestra de los productos y soluciones en los que he trabajado.",
+      subtitle:
+        "Una muestra de los productos y soluciones en los que he trabajado.",
       viewProject: "Ver proyecto",
     },
     certificates: {
@@ -221,14 +238,24 @@ export const translations: Record<Lang, Dict> = {
     contact: {
       tag: "Contacto",
       title: "Construyamos algo juntos",
-      subtitle: "Conectemos por LinkedIn o agenda una reunión directamente en mi calendario.",
+      subtitle:
+        "Conectemos por LinkedIn o agenda una reunión directamente en mi calendario.",
       linkedinTitle: "Conecta conmigo",
-      linkedinDesc: "Hablemos sobre tu proyecto, ideas o una posible colaboración.",
+      linkedinDesc:
+        "Hablemos sobre tu proyecto, ideas o una posible colaboración.",
       linkedinCta: "Ir a LinkedIn",
       scheduleTitle: "Agenda una hora",
-      scheduleDesc: "Elige un día y horario. Pronto se integrará con Google Calendar.",
+      scheduleDesc:
+        "Elige un día y horario. Pronto se integrará con Google Calendar.",
       pickDate: "Elige una fecha",
       pickTime: "Elige un horario",
+      nameLabel: "Nombre",
+      emailLabel: "Correo electrónico",
+      namePlaceholder: "Tu nombre",
+      emailPlaceholder: "Tu correo",
+      slotTaken: "Este horario ya está reservado.",
+      bookingError: "No se pudo agendar, intenta de nuevo.",
+      bookingSuccess: "Solicitud enviada correctamente.",
       confirm: "Confirmar reunión",
       confirmed: "¡Reunión agendada!",
       confirmedNote: "Te contactaré para confirmar los detalles.",
@@ -296,12 +323,17 @@ export const translations: Record<Lang, Dict> = {
     services: {
       tag: "Services",
       title: "What I can build for you",
-      subtitle: "Custom freelance software development services, from idea to production.",
+      subtitle:
+        "Custom freelance software development services, from idea to production.",
       items: [
         {
           title: "Websites & Landing pages",
           desc: "Modern, fast and optimized sites that turn visitors into customers.",
-          features: ["Responsive design", "SEO & performance", "Custom animations"],
+          features: [
+            "Responsive design",
+            "SEO & performance",
+            "Custom animations",
+          ],
         },
         {
           title: "Custom web apps",
@@ -345,7 +377,8 @@ export const translations: Record<Lang, Dict> = {
     experience: {
       tag: "Experience",
       title: "My professional timeline",
-      subtitle: "A journey through the companies and projects that shaped my experience.",
+      subtitle:
+        "A journey through the companies and projects that shaped my experience.",
       present: "Present",
     },
     projects: {
@@ -362,14 +395,24 @@ export const translations: Record<Lang, Dict> = {
     contact: {
       tag: "Contact",
       title: "Let's build something together",
-      subtitle: "Connect with me on LinkedIn or book a meeting directly on my calendar.",
+      subtitle:
+        "Connect with me on LinkedIn or book a meeting directly on my calendar.",
       linkedinTitle: "Connect with me",
-      linkedinDesc: "Let's talk about your project, ideas or a possible collaboration.",
+      linkedinDesc:
+        "Let's talk about your project, ideas or a possible collaboration.",
       linkedinCta: "Go to LinkedIn",
       scheduleTitle: "Book a slot",
-      scheduleDesc: "Pick a day and time. Google Calendar integration coming soon.",
+      scheduleDesc:
+        "Pick a day and time. Google Calendar integration coming soon.",
       pickDate: "Pick a date",
       pickTime: "Pick a time",
+      nameLabel: "Name",
+      emailLabel: "Email",
+      namePlaceholder: "Your name",
+      emailPlaceholder: "Your email",
+      slotTaken: "This time is already booked.",
+      bookingError: "Booking failed, please try again.",
+      bookingSuccess: "Request sent successfully.",
       confirm: "Confirm meeting",
       confirmed: "Meeting booked!",
       confirmedNote: "I'll reach out to confirm the details.",
@@ -437,17 +480,26 @@ export const translations: Record<Lang, Dict> = {
     services: {
       tag: "Serviços",
       title: "O que posso construir para você",
-      subtitle: "Serviços freelance de desenvolvimento de software sob medida, da ideia à produção.",
+      subtitle:
+        "Serviços freelance de desenvolvimento de software sob medida, da ideia à produção.",
       items: [
         {
           title: "Sites & Landing pages",
           desc: "Sites modernos, rápidos e otimizados que convertem visitantes em clientes.",
-          features: ["Design responsivo", "SEO & performance", "Animações sob medida"],
+          features: [
+            "Design responsivo",
+            "SEO & performance",
+            "Animações sob medida",
+          ],
         },
         {
           title: "Aplicações web sob medida",
           desc: "Software empresarial full stack para gerenciar e escalar sua operação.",
-          features: ["Dashboards & painéis", "Integrações de API", "Bancos de dados"],
+          features: [
+            "Dashboards & painéis",
+            "Integrações de API",
+            "Bancos de dados",
+          ],
         },
       ],
       cta: "Solicitar orçamento",
@@ -486,7 +538,8 @@ export const translations: Record<Lang, Dict> = {
     experience: {
       tag: "Trajetória",
       title: "Minha linha do tempo profissional",
-      subtitle: "Um percurso pelas empresas e projetos que formaram minha experiência.",
+      subtitle:
+        "Um percurso pelas empresas e projetos que formaram minha experiência.",
       present: "Atual",
     },
     projects: {
@@ -503,14 +556,24 @@ export const translations: Record<Lang, Dict> = {
     contact: {
       tag: "Contato",
       title: "Vamos construir algo juntos",
-      subtitle: "Conecte-se comigo no LinkedIn ou agende uma reunião direto na minha agenda.",
+      subtitle:
+        "Conecte-se comigo no LinkedIn ou agende uma reunião direto na minha agenda.",
       linkedinTitle: "Conecte-se comigo",
-      linkedinDesc: "Vamos falar sobre seu projeto, ideias ou uma possível colaboração.",
+      linkedinDesc:
+        "Vamos falar sobre seu projeto, ideias ou uma possível colaboração.",
       linkedinCta: "Ir para o LinkedIn",
       scheduleTitle: "Agende um horário",
-      scheduleDesc: "Escolha um dia e horário. Integração com Google Calendar em breve.",
+      scheduleDesc:
+        "Escolha um dia e horário. Integração com Google Calendar em breve.",
       pickDate: "Escolha uma data",
       pickTime: "Escolha um horário",
+      nameLabel: "Nome",
+      emailLabel: "Email",
+      namePlaceholder: "Seu nome",
+      emailPlaceholder: "Seu email",
+      slotTaken: "Este horário já está reservado.",
+      bookingError: "Não foi possível agendar, tente novamente.",
+      bookingSuccess: "Solicitação enviada com sucesso.",
       confirm: "Confirmar reunião",
       confirmed: "Reunião agendada!",
       confirmedNote: "Entrarei em contato para confirmar os detalhes.",
@@ -520,4 +583,4 @@ export const translations: Record<Lang, Dict> = {
       built: "Desenvolvido com Next.js & Tailwind CSS.",
     },
   },
-}
+};

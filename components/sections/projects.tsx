@@ -8,6 +8,9 @@ import { projects } from "@/lib/data"
 export function Projects() {
   const { t } = useLanguage()
 
+  // Sort by year descending (newest first)
+  const sorted = [...projects].sort((a, b) => b.year - a.year)
+
   return (
     <section id="projects" className="scroll-mt-20 border-y border-border bg-card/40 py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -25,9 +28,9 @@ export function Projects() {
           </ScrollReveal>
         </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project, i) => (
-            <ScrollReveal key={project.title} delay={(i % 3) * 90}>
+        <div className="mt-12 grid gap-6 sm:grid-cols-2">
+          {sorted.map((project, i) => (
+            <ScrollReveal key={project.title} delay={(i % 2) * 90}>
               <ProjectCard project={project} />
             </ScrollReveal>
           ))}

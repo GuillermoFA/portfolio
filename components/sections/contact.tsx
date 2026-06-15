@@ -1,14 +1,14 @@
-"use client"
+"use client";
 
-import { Mail, ArrowUpRight } from "lucide-react"
-import { useLanguage } from "@/components/providers/language-provider"
-import { ScrollReveal, SectionTag } from "@/components/scroll-reveal"
-import { BookingCalendar } from "@/components/booking-calendar"
-import { LinkedInIcon } from "@/components/icons"
-import { LINKEDIN_URL, EMAIL } from "@/lib/data"
+import { Mail, ArrowUpRight } from "lucide-react";
+import { useLanguage } from "@/components/providers/language-provider";
+import { ScrollReveal, SectionTag } from "@/components/scroll-reveal";
+import { BookingCalendar } from "@/components/booking-calendar";
+import { LinkedInIcon } from "@/components/icons";
+import { LINKEDIN_URL, EMAIL } from "@/lib/data";
 
 export function Contact() {
-  const { t } = useLanguage()
+  const { t } = useLanguage();
 
   return (
     <section id="contact" className="scroll-mt-20 py-20 sm:py-28">
@@ -23,19 +23,21 @@ export function Contact() {
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={140}>
-            <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">{t.contact.subtitle}</p>
+            <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
+              {t.contact.subtitle}
+            </p>
           </ScrollReveal>
         </div>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
           {/* LinkedIn + email */}
           <ScrollReveal>
-            <div className="flex h-full flex-col gap-4">
+            <div className="flex flex-col gap-4">
               <a
                 href={LINKEDIN_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="group relative flex flex-1 flex-col justify-between overflow-hidden rounded-2xl border border-border bg-card p-7 transition-all hover:-translate-y-1 hover:border-primary/50"
+                className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-border bg-card p-7 transition-all hover:-translate-y-1 hover:border-primary/50"
               >
                 <div
                   aria-hidden="true"
@@ -48,8 +50,12 @@ export function Contact() {
                   <ArrowUpRight className="h-5 w-5 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-primary" />
                 </div>
                 <div className="mt-6">
-                  <h3 className="text-lg font-semibold">{t.contact.linkedinTitle}</h3>
-                  <p className="mt-1 text-sm text-muted-foreground">{t.contact.linkedinDesc}</p>
+                  <h3 className="text-lg font-semibold">
+                    {t.contact.linkedinTitle}
+                  </h3>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    {t.contact.linkedinDesc}
+                  </p>
                   <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-primary">
                     {t.contact.linkedinCta}
                   </span>
@@ -65,7 +71,9 @@ export function Contact() {
                 </span>
                 <div className="min-w-0">
                   <p className="text-sm font-semibold">Email</p>
-                  <p className="truncate text-sm text-muted-foreground">{EMAIL}</p>
+                  <p className="truncate text-sm text-muted-foreground">
+                    {EMAIL}
+                  </p>
                 </div>
               </a>
             </div>
@@ -75,8 +83,12 @@ export function Contact() {
           <ScrollReveal delay={120}>
             <div className="rounded-2xl border border-border bg-card/40 p-2">
               <div className="px-5 pt-4">
-                <h3 className="text-lg font-semibold">{t.contact.scheduleTitle}</h3>
-                <p className="mt-1 text-sm text-muted-foreground">{t.contact.scheduleDesc}</p>
+                <h3 className="text-lg font-semibold">
+                  {t.contact.scheduleTitle}
+                </h3>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  {t.contact.scheduleDesc}
+                </p>
               </div>
               <div className="p-3">
                 <BookingCalendar />
@@ -86,5 +98,5 @@ export function Contact() {
         </div>
       </div>
     </section>
-  )
+  );
 }

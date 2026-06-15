@@ -4,6 +4,7 @@ import { Briefcase } from "lucide-react"
 import { useLanguage } from "@/components/providers/language-provider"
 import { ScrollReveal, SectionTag } from "@/components/scroll-reveal"
 import { experience } from "@/lib/data"
+import { TechIcon } from "@/components/tech-icon"
 
 export function Experience() {
   const { t, lang } = useLanguage()
@@ -65,12 +66,7 @@ export function Experience() {
                     <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.description[lang]}</p>
                     <div className="mt-4 flex flex-wrap gap-2">
                       {item.tech.map((tech) => (
-                        <span
-                          key={tech}
-                          className="rounded-md border border-border bg-background px-2 py-1 font-mono text-xs text-muted-foreground"
-                        >
-                          {tech}
-                        </span>
+                        <TechIcon key={tech} tech={tech} />
                       ))}
                     </div>
                   </div>

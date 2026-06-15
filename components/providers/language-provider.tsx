@@ -20,9 +20,6 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     const stored = (typeof window !== "undefined" && localStorage.getItem(STORAGE_KEY)) as Lang | null
     if (stored && ["es", "en", "pt"].includes(stored)) {
       setLangState(stored)
-    } else if (typeof navigator !== "undefined") {
-      const nav = navigator.language.slice(0, 2)
-      if (nav === "en" || nav === "pt") setLangState(nav)
     }
   }, [])
 
